@@ -6,12 +6,11 @@ asar: true
 
 directories:
   buildResources: dist-assets/
-  output: dist/
+  output: build/
 
 files:
   - package.json
-  - init.js
-  - build/
+  - pre-build/
   - node_modules/
 
 dmg:

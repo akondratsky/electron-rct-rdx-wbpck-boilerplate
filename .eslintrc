@@ -1,9 +1,14 @@
 {
+  "globals": {
+    "document": true,
+    "window": true,
+  },
   "root": true,
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "prettier"
+    "plugin:prettier/recommended",
+    "prettier/react"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -12,8 +17,9 @@
       "modules": true
     }
   },
-  "plugins": [ "react" ],
+  "plugins": [ "react", "prettier" ],
   "rules": {
+    "prettier/prettier": "error",
     "prefer-const": "warn",
     "no-console": "off",
     "no-loop-func": "warn",
@@ -32,6 +38,22 @@
   },
   "env": {
     "es6": true,
-    "node": true
-  }
+    "node": true,
+    "mocha": true
+  },
+  "overrides": [
+    {
+      "files": "*.spec.js",
+      "rules": {
+        "no-unused-expressions": "off"
+      },
+      "globals": {
+        "shallow": true,
+        "mount": true,
+        "render": true,
+        "expect": true,
+        "mockStore": true
+      }
+    }
+  ]
 }
