@@ -1,11 +1,11 @@
-# electron-react-redux-boilerplate
-[![Build Status](https://api.travis-ci.org/jschr/electron-react-redux-boilerplate.svg)](https://travis-ci.org/jschr/electron-react-redux-boilerplate)
-[![dependencies Status](https://david-dm.org/jschr/electron-react-redux-boilerplate/status.svg)](https://david-dm.org/jschr/electron-react-redux-boilerplate)
-[![devDependencies Status](https://david-dm.org/jschr/electron-react-redux-boilerplate/dev-status.svg)](https://david-dm.org/jschr/electron-react-redux-boilerplate?type=dev)
+# electron-rct-rdx-wbpck-boilerplate
 
-A minimal boilerplate to get started with [Electron](http://electron.atom.io/), [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/).
+[![dependencies Status](https://david-dm.org/akondratsky/electron-rct-rdx-wbpck-boilerplate/status.svg)](https://david-dm.org/akondratsky/electron-rct-rdx-wbpck-boilerplate)
+[![devDependencies Status](https://david-dm.org/akondratsky/electron-rct-rdx-wbpck-boilerplate/dev-status.svg)](https://david-dm.org/akondratsky/electron-rct-rdx-wbpck-boilerplate?type=dev)
 
-Including:
+A boilerplate that I like little more. It is intended to get started with [Electron](http://electron.atom.io/), [React](https://facebook.github.io/react/), [Redux](http://redux.js.org/) and [Webpack](https://webpack.js.org)
+
+Here you'll find something from the [parent repository](https://github.com/jschr/electron-react-redux-boilerplate) and something more:
 
 * [React Router](https://reacttraining.com/react-router/)
 * [Redux Thunk](https://github.com/gaearon/redux-thunk/)
@@ -13,25 +13,24 @@ Including:
 * [Redux Local Storage](https://github.com/elgerlambert/redux-localstorage/)
 * [Electron Packager](https://github.com/electron-userland/electron-packager)
 * [Electron DevTools Installer](https://github.com/MarshallOfSound/electron-devtools-installer)
-* [Electron Mocha](https://github.com/jprichardson/electron-mocha)
-* [Browsersync](https://browsersync.io/)
+* [Mocha](https://mochajs.org)
+* [Reselect](https://github.com/reduxjs/reselect)
+* [Material-UI](https://material-ui.com/ru/)
 
 ## Quick start
 
 Clone the repository
 ```bash
-git clone --depth=1 git@github.com:jschr/electron-react-redux-boilerplate.git
-```
+git clone --depth=1 https://github.com/akondratsky/electron-rct-rdx-wbpck-boilerplate
 
-Install dependencies
-```bash
-cd electron-react-redux-boilerplate
+cd electron-rct-rdx-wbpck-boilerplate
+
 npm install
 ```
 
 Development
 ```bash
-npm run develop
+npm start
 ```
 
 ## DevTools
@@ -66,13 +65,16 @@ npm run pack:linux
 npm run test
 ```
 
-## Maintainers
-
-- [@jschr](https://github.com/jschr)
-- [@pronebird](https://github.com/pronebird)
-
-## Apps using this boilerplate
-
-- [Mullvad VPN app](https://github.com/mullvad/mullvadvpn-app)
-- [YouTube Downloader Electron](https://github.com/vanzylv/youtube-downloader-electron)
-- [Martian: A Websocket test tool](https://github.com/drex44/martian)
+## Updating snapshots
+```
+npm run test:update
+```
+or
+```
+npm run test -- --update
+```
+## Test coverage
+```
+npm run coverage
+```
+Collecting coverage for all files in ```coverage/lcov-report/index.html``` file.
